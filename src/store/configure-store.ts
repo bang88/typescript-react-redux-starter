@@ -13,8 +13,8 @@ import makeRootReducer, {injectReducer} from './reducers';
 const rooterReducer = makeRootReducer({});
 function configureStore(initialState) {
   const store = compose(
-    _getMiddleware(),
-    ..._getEnhancers()
+    _getMiddleware()
+    // ..._getEnhancers()
   )(createStore)(rooterReducer, initialState);
 
   configReducer(store);
@@ -55,7 +55,7 @@ function _getEnhancers() {
  */
 function configReducer(store) {
 
-  // split reducer 
+  // split reducer
   store.asyncReducers = {};
   // add injectReducer to store,so we no need to import from sub routes anymore
   store.injectReducer = injectReducer;

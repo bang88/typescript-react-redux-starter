@@ -23,7 +23,8 @@
     "pretest": "npm run lint",
     "test": "ts-babel-node ./node_modules/mocha/bin/_mocha --opts ./test-utils/mocha.opts",
     "test:watch": "ts-babel-node ./node_modules/mocha/bin/_mocha --opts ./test-utils/mocha.opts --watch --watch-extensions ts,tsx",
-    "typings": "rimraf typings/ && typings install"
+    "typings": "rimraf typings/ && typings install",
+    "ghpage": "node ./scripts/gh-pages.js"
   },
   "keywords": [
     "react",
@@ -69,6 +70,7 @@
     "eslint": "^2.8.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.4",
+    "gh-pages": "^0.11.0",
     "history": "^3.0.0",
     "html-webpack-plugin": "^2.9.0",
     "immutable": "^3.8.1",

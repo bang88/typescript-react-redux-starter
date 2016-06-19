@@ -10,16 +10,6 @@ interface Window {
   devToolsExtension?: () => Function;
 }
 
-// webpack-hot-loader sets some extra attributes on node's `module`if that
-// module has been hot-loaded in the browser.
-interface NodeModule {
-  hot: { accept: Function };
-}
-
-interface Store<S> {
-  asyncReducers: Object
-}
-
 //  declaration for webpack require function
 // declare var require: {
 //   // (path: string): T;
@@ -27,7 +17,6 @@ interface Store<S> {
 //   (paths: string[], callback: (...modules: any[]) => void): any;
 //   ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
 // };
-
 
 declare var require: {
   (id: string): any;
@@ -39,5 +28,5 @@ declare var require: {
 };
 
 declare var module: {
-  hot: any
+  hot: { accept: Function };
 }

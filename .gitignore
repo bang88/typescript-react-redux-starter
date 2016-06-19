@@ -46,3 +46,5 @@ test/**/*.js.map
 e2e/robot/test_results
 
 npm-debug.*
+
+.awcache/

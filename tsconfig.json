@@ -11,7 +11,8 @@
     "removeComments": false,
     "sourceMap": false,
     "inlineSourceMap": true,
-    "noEmitHelpers": false
+    "noEmitHelpers": false,
+    "declaration": false
   },
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true,

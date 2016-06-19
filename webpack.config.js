@@ -40,6 +40,7 @@ module.exports = {
       loaders.html,
       loaders.css,
       loaders.svg,
+      loaders.image,
       loaders.eot,
       loaders.woff,
       loaders.woff2,

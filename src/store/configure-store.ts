@@ -4,20 +4,23 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { fromJS } from 'immutable';
 const thunk = require('redux-thunk').default;
 const persistState = require('redux-localstorage');
-const { browserHistory } = require('react-router');
-const { routerMiddleware } = require('react-router-redux');
+import { browserHistory } from 'react-router';
+import { routerMiddleware } from 'react-router-redux';
 
 import promiseMiddleware from '../middleware/promise-middleware';
 import logger from './logger';
-import rootReducer from '../reducers';
-
+import makeRootReducer, {injectReducer} from './reducers';
+const rooterReducer = makeRootReducer({});
 function configureStore(initialState) {
   const store = compose(
     _getMiddleware(),
     ..._getEnhancers()
-  )(createStore)(rootReducer, initialState);
+  )(createStore)(rooterReducer, initialState);
+
+  configReducer(store);
 
   _enableHotLoader(store);
+
   return store;
 }
 
@@ -41,16 +44,29 @@ function _getEnhancers() {
   ];
 
   if (__DEV__ && window.devToolsExtension) {
-    enhancers = [...enhancers, window.devToolsExtension() ];
+    enhancers = [...enhancers, window.devToolsExtension()];
   }
 
   return enhancers;
 }
 
+/**
+ * store Store
+ */
+function configReducer(store) {
+
+  // split reducer 
+  store.asyncReducers = {};
+  // add injectReducer to store,so we no need to import from sub routes anymore
+  store.injectReducer = injectReducer;
+}
+
 function _enableHotLoader(store) {
+
+
   if (__DEV__ && module.hot) {
-    module.hot.accept('../reducers', () => {
-      const nextRootReducer = require('../reducers');
+    module.hot.accept('../routes', () => {
+      const nextRootReducer = require('../routes').default;
       store.replaceReducer(nextRootReducer);
     });
   }

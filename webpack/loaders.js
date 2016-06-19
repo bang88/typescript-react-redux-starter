@@ -24,6 +24,7 @@ exports.css = {
   exclude: /node_modules/,
 };
 
+exports.image = makeUrlLoader(/\.(png|jpg)$/);
 exports.svg = makeUrlLoader(/\.svg$/);
 exports.eot = makeUrlLoader(/\.eot$/);
 exports.woff = makeUrlLoader(/\.woff$/);

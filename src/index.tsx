@@ -4,11 +4,10 @@ import 'es6-promise';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-const { Provider } = require('react-redux');
-const { Router, browserHistory } = require('react-router');
-const { syncHistoryWithStore } = require('react-router-redux');
+import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 
-import routes from './store/routes';
 import configureStore from './store/configure-store';
 
 // Global styles
@@ -16,14 +15,14 @@ import './styles/index.css';
 
 const store = configureStore({});
 const history = syncHistoryWithStore(browserHistory, store);
+import defaultRoutes from './routes';
+const routes = defaultRoutes(store);
 
 ReactDOM.render(
-  <div>
-    <Provider store={ store }>
-      <Router history={ history }>
-        { routes }
-      </Router>
-    </Provider>
-  </div>,
+  <Provider store={ store }>
+    <Router history={ history }>
+      { routes }
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );

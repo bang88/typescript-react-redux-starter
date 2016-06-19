@@ -42,7 +42,7 @@
       "check-whitespace"
     ],
     "radix": true,
-    "semicolon": true,
+    "semicolon": [false],
     "triple-equals": [true, "allow-null-check"],
     "use-strict": true,
     "variable-name": "allow-leading-underscore",

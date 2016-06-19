@@ -1,2 +1,5 @@
 /* import antd style. you can remove next line if you use babel-plugin-antd */
-@import 'antd/dist/antd.css'
+@import 'antd/dist/antd.css';
+
+/* we need import layout here,it override some antd styles */
+@import './layout.css';

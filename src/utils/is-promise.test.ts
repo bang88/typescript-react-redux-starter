@@ -1,27 +1,25 @@
+import {test} from 'ava';
 import isPromise from './is-promise';
-import * as assert from 'assert';
 
-describe('isPromise', () => {
-  it('should return true if a Promise is provided', () => {
-    const promise = new Promise((resolve) => resolve(true));
+test('should return true if a Promise is provided', t => {
+  const promise = new Promise((resolve) => resolve(true));
 
-    const payload = {
-      promise,
-    };
+  const payload = {
+    promise,
+  };
 
-    assert(isPromise(payload));
-  });
+  t.true(isPromise(payload));
+});
 
-  it('should return false if something that is not a Promise is provided',
-    () => {
+test('should return false if something that is not a Promise is provided',
+  t => {
     const badPayload1 = { hello: 'world' };
     const badPayload2 = ['hello', 'world'];
     const badPayload3 = 'hello world';
     const badPayload4 = 'hello world';
 
-    assert(!isPromise({ promise: badPayload1 }));
-    assert(!isPromise({ promise: badPayload2 }));
-    assert(!isPromise({ promise: badPayload3 }));
-    assert(!isPromise({ promise: badPayload4 }));
+    t.true(!isPromise({ promise: badPayload1 }));
+    t.true(!isPromise({ promise: badPayload2 }));
+    t.true(!isPromise({ promise: badPayload3 }));
+    t.true(!isPromise({ promise: badPayload4 }));
   });
-});

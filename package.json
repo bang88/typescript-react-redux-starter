@@ -24,7 +24,7 @@
     "start": "cross-env NODE_ENV=production PORT=3002 node server/node-server.js",
     "pretest": "npm run lint",
     "test": "tsc && ava --verbose",
-    "test:watch": "npm run test -- --watch",
+    "test:watch": "concurrently \"tsc -w\"  \"ava --verbose --watch\"",
     "typings": "rimraf typings/ && typings install",
     "ghpage": "node ./scripts/gh-pages.js"
   },

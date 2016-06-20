@@ -1,3 +1,4 @@
+/* eslint-disable */
 var ghpages = require('gh-pages');
 var path = require('path');
 

@@ -12,10 +12,6 @@ Another react typescript starter kit build with love [ant-design](https://github
 $ npm run dev
 ```
 
-This runs a development mode server with live reload etc.
-
-Open `http://localhost:8080` in your browser.
-
 ### Production
 
 ```bash
@@ -25,6 +21,7 @@ npm start
 
 ### Tests
 
+- [ava](https://github.com/avajs/ava)
 
 #### Single Run
 ```bash

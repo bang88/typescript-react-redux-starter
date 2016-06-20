@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "/typescript-react-redux-starter";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -81495,4 +81495,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=vendor.479cd45e8c4811db296d.js.map
+//# sourceMappingURL=vendor.81732b10af571954d917.js.map

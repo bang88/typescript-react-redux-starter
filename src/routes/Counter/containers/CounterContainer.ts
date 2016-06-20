@@ -12,10 +12,10 @@ import Counter from '../components/Counter'
     Keys will be passed as props to presentational components. Here we are
     implementing our wrapper around increment; the component doesn't care   */
 
-const mapActionCreators = () => {
+const mapActionCreators = (dispatch) => {
   return {
-    increment: () => increment(1),
-    doubleAsync
+    increment: (): void => dispatch(increment(1)),
+    doubleAsync: (): void => dispatch(doubleAsync())
   }
 }
 

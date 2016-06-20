@@ -58,7 +58,9 @@ function configReducer(store) {
   // split reducer
   store.asyncReducers = {};
   // add injectReducer to store,so we no need to import from sub routes anymore
-  store.injectReducer = injectReducer;
+  store.injectReducer = ({ key, reducer }) => {
+    injectReducer(store, { key, reducer })
+  };
 }
 
 function _enableHotLoader(store) {

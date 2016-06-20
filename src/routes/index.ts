@@ -11,7 +11,7 @@ import CounterRoute from './Counter'
 export const createRoutes = (store) => ({
   path: '/',
   component: Layout,
-  // indexRoute: Home,
+  indexRoute: Home,
   childRoutes: [
     CounterRoute(store)
   ]

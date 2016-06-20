@@ -1,21 +1,29 @@
 'use strict';
-
+const path = require('path');
+const sources = path.resolve("./src");
+console.log(sources)
 exports.tslint = {
   test: /\.tsx?$/,
   loader: 'tslint',
-  exclude: /node_modules/,
+  include: [
+    sources
+  ],
 };
 
 exports.tsx = {
   test: /\.tsx?$/,
   loader: 'awesome-typescript-loader',
-  exclude: /node_modules/,
+  include:  [
+    sources
+  ],
 };
 
 exports.html = {
   test: /\.html$/,
   loader: 'raw',
-  exclude: /node_modules/,
+  include:  [
+    sources
+  ],
 };
 
 exports.css = {

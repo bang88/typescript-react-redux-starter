@@ -1,11 +1,11 @@
-import 'es5-shim';
-import 'es6-shim';
-import 'es6-promise';
+// import 'es5-shim';
+// import 'es6-shim';
+// import 'es6-promise';
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
+import { Router, hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import configureStore from './store/configure-store';
@@ -14,7 +14,7 @@ import configureStore from './store/configure-store';
 import './styles/index.css';
 
 const store = configureStore({});
-const history = syncHistoryWithStore(browserHistory, store);
+const history = syncHistoryWithStore(hashHistory, store);
 import defaultRoutes from './routes';
 const routes = defaultRoutes(store);
 

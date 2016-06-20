@@ -17,6 +17,7 @@ class Layout extends React.Component<any, any> {
     }
     render() {
         const collapse = this.state.collapse;
+
         return (
             <div
                 className={
@@ -76,18 +77,18 @@ class Layout extends React.Component<any, any> {
                     </div>
                     <div className="ant-layout-breadcrumb">
                         <Breadcrumb>
-                            <Breadcrumb.Item>首页</Breadcrumb.Item>
-                            <Breadcrumb.Item>应用列表</Breadcrumb.Item>
+                            <Breadcrumb.Item href="#/">首页</Breadcrumb.Item>
+                            <Breadcrumb.Item href="#/counter">
+                                应用列表
+                            </Breadcrumb.Item>
                             <Breadcrumb.Item>某应用</Breadcrumb.Item>
                         </Breadcrumb>
                     </div>
                     <div className="ant-layout-container">
                         <div className="ant-layout-content">
-                            <div style={{ height: 220 }}>
-                               {
-                                   this.props.chlidren
-                               }
-                            </div>
+                            {
+                                this.props.children
+                            }
                         </div>
                     </div>
                     <div className="ant-layout-footer">

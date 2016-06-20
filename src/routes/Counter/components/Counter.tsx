@@ -1,10 +1,24 @@
 import * as React from 'react';
-
-class Counter extends React.Component<any, any> {
+import {Button, Tag} from 'antd';
+import { increment, doubleAsync } from '../modules/counter'
+interface CounterProps extends React.Props<any> {
+    increment: typeof increment,
+    doubleAsync: typeof doubleAsync,
+    counter: number
+}
+class Counter extends React.Component<CounterProps, any> {
     render() {
         return (
             <div>
-                Counter
+
+                <Tag> Counter {this.props.counter}</Tag>
+
+                <Button type="primary" onClick={() => {
+                    this.props.increment()
+                } }>increment</Button>
+
+                <Button type="ghost"
+                    onClick={this.props.doubleAsync}>doubleAsync</Button>
             </div>
         );
     }

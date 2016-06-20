@@ -16,7 +16,7 @@
   },
   "awesomeTypescriptLoaderOptions": {
     "useBabel": true,
-    "useCache": true,
+    "useCache": false,
     "emitRequireType": false
   },
   "exclude": [

@@ -6,13 +6,24 @@ const loaders = require('./webpack/loaders');
 const plugins = require('./webpack/plugins');
 const postcssInit = require('./webpack/postcss');
 
-const baseAppEntries = [ './src/index.tsx' ];
-const devAppEntries = [ 'webpack-hot-middleware/client?reload=true' ];
+const baseAppEntries = ['./src/index.tsx'];
+const devAppEntries = ['webpack-hot-middleware/client?reload=true'];
 const appEntries = baseAppEntries
   .concat(process.env.NODE_ENV === 'development' ? devAppEntries : []);
-
+  
+const vendor = [
+  'react',
+  'react-redux',
+  'react-router',
+  'react-router-redux',
+  'redux',
+  'antd'
+]
 module.exports = {
-  entry: { app: appEntries },
+  entry: {
+    app: appEntries,
+    vendor: vendor
+  },
 
   output: {
     path: path.join(__dirname, 'dist'),

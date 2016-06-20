@@ -13,12 +13,12 @@ export default (store) => ({
       // require.d.ts. Webpack sees this and automatically puts c and d
       // into a separate chunk. 
 
-      const Counter = require('./containers/CounterContainer');
+      const Counter = require('./containers/CounterContainer').default;
 
-      const reducer = require('./modules/counter')
+      const reducer = require('./modules/counter').default
 
       /*  Add the reducer to the store on key 'counter'  */
-      store.injectReducer(store, { key: 'counter', reducer })
+      store.injectReducer({ key: 'counter', reducer })
 
       /*  Return getComponent   */
       cb(null, Counter)

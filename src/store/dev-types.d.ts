@@ -24,7 +24,8 @@ declare var require: {
   cache: any;
   extensions: any;
   main: any;
-  ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
+  ensure: (paths: string[],
+    callback: (require: <T>(path: string) => T) => void) => void;
 };
 
 declare var module: {

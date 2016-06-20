@@ -10,14 +10,6 @@ interface Window {
   devToolsExtension?: () => Function;
 }
 
-//  declaration for webpack require function
-// declare var require: {
-//   // (path: string): T;
-//   <T>(path: string): T;
-//   (paths: string[], callback: (...modules: any[]) => void): any;
-//   ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
-// };
-
 declare var require: {
   (id: string): any;
   resolve(id: string): string;

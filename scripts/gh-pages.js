@@ -2,6 +2,6 @@
 var ghpages = require('gh-pages');
 var path = require('path');
 
-ghpages.publish(path.join('dist'), { push: false }, function(err) {
+ghpages.publish(path.join('dist'), { push: true }, function(err) {
   console.log(err);
 });

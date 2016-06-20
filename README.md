@@ -41,6 +41,14 @@ developing your software.
 
 Edit [this file](server/proxy-config.js) to mount such APIs at a given path.
 
+## TODO
+
+> improve webpack performance
+
+```js
+webpack -p // sucks.  Can't found why .
+```
+
 ## License
 
 Copyright (c) [bang88](//github.com/bang88)

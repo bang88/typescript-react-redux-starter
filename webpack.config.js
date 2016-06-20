@@ -10,7 +10,9 @@ const baseAppEntries = ['./src/index.tsx'];
 const devAppEntries = ['webpack-hot-middleware/client?reload=true'];
 const appEntries = baseAppEntries
   .concat(process.env.NODE_ENV === 'development' ? devAppEntries : []);
-  
+
+// FIXME: change next line if you don't want publish to gh-pages 
+const publicPath = '/typescript-react-redux-starter'  
 const vendor = [
   'react',
   'react-redux',
@@ -28,7 +30,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].[hash].js',
-    publicPath: '/',
+    publicPath: publicPath,
     sourceMapFilename: '[name].[hash].js.map',
     chunkFilename: '[id].chunk.js',
   },

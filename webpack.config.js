@@ -12,7 +12,7 @@ const appEntries = baseAppEntries
   .concat(process.env.NODE_ENV === 'development' ? devAppEntries : []);
 
 // FIXME: change next line if you don't want publish to gh-pages 
-const publicPath = '/typescript-react-redux-starter'  
+const publicPath = '/typescript-react-redux-starter/'  
 const vendor = [
   'react',
   'react-redux',

@@ -8,7 +8,7 @@ webpackJsonp([1],{
 
 	"use strict";
 	
-	var react_redux_1 = __webpack_require__(/*! react-redux */ 175);
+	var react_redux_1 = __webpack_require__(/*! react-redux */ 168);
 	var counter_1 = __webpack_require__(/*! ../modules/counter */ 284);
 	/*  This is a container component. Notice it does not contain any JSX,
 	    nor does it import React. This component is **only** responsible for
@@ -18,12 +18,14 @@ webpackJsonp([1],{
 	/*  Object of action creators (can also be function that returns object).
 	    Keys will be passed as props to presentational components. Here we are
 	    implementing our wrapper around increment; the component doesn't care   */
-	var mapActionCreators = function mapActionCreators() {
+	var mapActionCreators = function mapActionCreators(dispatch) {
 	    return {
 	        increment: function increment() {
-	            return counter_1.increment(1);
+	            return dispatch(counter_1.increment(1));
 	        },
-	        doubleAsync: counter_1.doubleAsync
+	        doubleAsync: function doubleAsync() {
+	            return dispatch(counter_1.doubleAsync());
+	        }
 	    };
 	};
 	var mapStateToProps = function mapStateToProps(state) {
@@ -121,7 +123,8 @@ webpackJsonp([1],{
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var React = __webpack_require__(/*! react */ 9);
+	var React = __webpack_require__(/*! react */ 2);
+	var antd_1 = __webpack_require__(/*! antd */ 278);
 	
 	var Counter = function (_React$Component) {
 	    _inherits(Counter, _React$Component);
@@ -133,9 +136,13 @@ webpackJsonp([1],{
 	    }
 	
 	    _createClass(Counter, [{
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
-	            return React.createElement("div", null, "Counter");
+	            var _this2 = this;
+	
+	            return React.createElement("div", null, React.createElement(antd_1.Tag, null, " Counter ", this.props.counter), React.createElement(antd_1.Button, { type: "primary", onClick: function onClick() {
+	                    _this2.props.increment();
+	                } }, "increment"), React.createElement(antd_1.Button, { type: "ghost", onClick: this.props.doubleAsync }, "doubleAsync"));
 	        }
 	    }]);
 	
@@ -148,4 +155,4 @@ webpackJsonp([1],{
 /***/ }
 
 });
-//# sourceMappingURL=1.813b954f7c5355dbb5fc.js.map
+//# sourceMappingURL=1.479cd45e8c4811db296d.js.map

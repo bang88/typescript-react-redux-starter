@@ -84,6 +84,36 @@ class Layout extends React.Component<any, any> {
                             <Menu.Item key="11">选项11</Menu.Item>
                             <Menu.Item key="12">选项12</Menu.Item>
                         </SubMenu>
+                        <SubMenu key="sub5"
+                            title={
+                                <span>
+                                    <Icon type="setting" />
+                                    <span className="nav-text"
+                                        title="管理菜单要简短"
+                                        >导航四
+                                    </span>
+                                </span>
+                            }>
+                            <Menu.Item key="9">选项9</Menu.Item>
+                            <Menu.Item key="10">选项10</Menu.Item>
+                            <Menu.Item key="11">选项11</Menu.Item>
+                            <Menu.Item key="12">选项12</Menu.Item>
+                        </SubMenu>
+                        <SubMenu key="sub6"
+                            title={
+                                <span>
+                                    <Icon type="setting" />
+                                    <span className="nav-text"
+                                        title="管理菜单要简短"
+                                        >导航五
+                                    </span>
+                                </span>
+                            }>
+                            <Menu.Item key="9">选项9</Menu.Item>
+                            <Menu.Item key="10">选项10</Menu.Item>
+                            <Menu.Item key="11">选项11</Menu.Item>
+                            <Menu.Item key="12">选项12</Menu.Item>
+                        </SubMenu>
                     </Menu>
 
 

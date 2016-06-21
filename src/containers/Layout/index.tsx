@@ -7,7 +7,7 @@ class Layout extends React.Component<any, any> {
     constructor(props: any) {
         super(props);
         this.state = {
-            collapse: false
+            collapse: true
         }
     }
     onCollapseChange = () => {

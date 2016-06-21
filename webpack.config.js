@@ -11,20 +11,22 @@ const devAppEntries = ['webpack-hot-middleware/client?reload=true'];
 const appEntries = baseAppEntries
   .concat(process.env.NODE_ENV === 'development' ? devAppEntries : []);
 
-// FIXME: change next line if you don't want publish to gh-pages 
-const publicPath = process.env.NODE_ENV === 'gh' ? '/typescript-react-redux-starter/' : '/';
+// FIXME: change next line if you don't want publish to gh-pages
+const publicPath = process.env.NODE_ENV === 'gh'
+  ? '/typescript-react-redux-starter/' : '/';
+
 const vendor = [
   'react',
   'react-redux',
   'react-router',
   'react-router-redux',
   'redux',
-  'antd'
-]
+  'antd',
+];
 module.exports = {
   entry: {
     app: appEntries,
-    vendor: vendor
+    vendor: vendor,
   },
 
   output: {

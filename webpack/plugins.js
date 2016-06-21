@@ -8,15 +8,15 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const basePlugins = [
   new webpack.DefinePlugin({
     __DEV__: process.env.NODE_ENV !== 'production',
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)    
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   }),
 
   new HtmlWebpackPlugin({
     template: './src/index.html',
     inject: 'body',
     minify: {
-      collapseWhitespace: true
-    }
+      collapseWhitespace: true,
+    },
   }),
   new webpack.NoErrorsPlugin(),
 ];

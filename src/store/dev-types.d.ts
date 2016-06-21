@@ -7,7 +7,7 @@ declare let __DEV__: boolean;
 
 // A hack for the Redux DevTools Chrome extension.
 interface Window {
-  devToolsExtension?: () => Function;
+    devToolsExtension?: () => Function;
 }
 
 interface WebpackRequireEnsureCallback {
@@ -16,9 +16,17 @@ interface WebpackRequireEnsureCallback {
 
 interface WebpackRequire {
     (id: string): any;
-    (paths: string[], callback: (...modules: any[]) => void): void;
-    ensure(ids: string[], callback: WebpackRequireEnsureCallback, chunkName?: string): void;
-    context(directory: string, useSubDirectories?: boolean, regExp?: RegExp): WebpackContext;
+    (paths: string[],
+        callback: (...modules: any[]) => void
+    ): void;
+    ensure(ids: string[],
+        callback: WebpackRequireEnsureCallback,
+        chunkName?: string
+    ): void;
+    context(directory: string,
+        useSubDirectories?: boolean,
+        regExp?: RegExp
+    ): WebpackContext;
 }
 
 interface WebpackContext extends WebpackRequire {
@@ -28,5 +36,5 @@ interface WebpackContext extends WebpackRequire {
 declare var require: WebpackRequire;
 
 declare var module: {
-  hot: { accept: Function };
+    hot: { accept: Function };
 }

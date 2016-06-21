@@ -49,6 +49,11 @@ Edit [this file](server/proxy-config.js) to mount such APIs at a given path.
 webpack -p // sucks.  Can't found why .
 ```
 
+## Note
+
+> This is a fork repo from [rangle](https://github.com/rangle/typescript-react-redux-starter),I try to add more typings,integrate with antd and let it works. 
+ But rewrite most of them under `src/*`, the next will be a complete rebuild
+
 ## License
 
 Copyright (c) [bang88](//github.com/bang88)

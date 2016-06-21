@@ -34606,7 +34606,7 @@
 	            });
 	        };
 	        _this.state = {
-	            collapse: false
+	            collapse: true
 	        };
 	        return _this;
 	    }
@@ -87818,4 +87818,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=app.29c12854301db19b7463.js.map
+//# sourceMappingURL=app.b8b3cba65065fdcaa69d.js.map

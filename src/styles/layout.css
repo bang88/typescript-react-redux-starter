@@ -38,45 +38,61 @@
   margin-bottom: 20px;
 }
 
-.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-item {
+.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-submenu {
   margin: 16px 0;
 }
 
-.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-item .nav-text {
+.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-submenu .nav-text {
   vertical-align: baseline;
   display: inline-block;
 }
 
-.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-item > .anticon {
+.ant-layout-aside .ant-layout-sider > .ant-menu > .ant-menu-submenu  .anticon {
   transition: font-size 0.3s;
 }
 
-.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item {
-  transition: all 0s ease;
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-submenu {
+  transition: all 0.5s ease;
 }
 
-.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item > .anticon {
-  font-size: 16px;
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-submenu > .ant-menu-submenu-title {
+  padding-left: 22px;
+}
+
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-submenu > .ant-menu-submenu-title::after {
+  font-size: 0;
+}
+
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-submenu  .anticon {
+  font-size: 20px;
   display: inline-block;
 }
 
-.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item .nav-text {
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-submenu .nav-text {
   display: none;
 }
 
-.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item:hover {
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-submenu:hover {
   background: #2db7f5;
-  color: #fff;
   transition: all 0s ease;
 }
 
-.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-item:hover .nav-text {
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-submenu:hover .nav-text {
   display: inline-block;
   vertical-align: top;
   background: #2db7f5;
   color: #fff;
-  padding-right: 16px;
+  padding-right: 0;
   border-radius: 0 5px 5px 0;
+}
+
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-submenu:hover .anticon {
+  display: none;
+}
+
+.ant-layout-aside-collapse .ant-layout-sider > .ant-menu > .ant-menu-submenu:hover > .ant-menu-submenu-title {
+  padding: 0;
+  text-align: center;
 }
 
 /* 实际使用中需要改成 position: fixed */

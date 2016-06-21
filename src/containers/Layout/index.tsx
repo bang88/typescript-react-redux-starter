@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Menu, Breadcrumb, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
-
+const MenuItemGroup = Menu.ItemGroup;
 class Layout extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
         this.state = {
-            collapse: true
+            collapse: false
         }
     }
     onCollapseChange = () => {
@@ -30,30 +30,63 @@ class Layout extends React.Component<any, any> {
                         😻
                     </div>
                     <Menu
-                        mode="inline"
+                        mode={collapse ? 'vertical' : 'inline'}
                         theme="dark"
-                        defaultSelectedKeys={['user']}>
-                        <Menu.Item key="user">
-                            <Icon type="user" />
-                            <span className="nav-text">导航一</span>
-                        </Menu.Item>
-                        <Menu.Item key="setting">
-                            <Icon type="setting" />
-                            <span className="nav-text">导航二</span>
-                        </Menu.Item>
-                        <Menu.Item key="laptop">
-                            <Icon type="laptop" />
-                            <span className="nav-text">导航三</span>
-                        </Menu.Item>
-                        <Menu.Item key="notification">
-                            <Icon type="notification" />
-                            <span className="nav-text">导航四</span>
-                        </Menu.Item>
-                        <Menu.Item key="folder">
-                            <Icon type="folder" />
-                            <span className="nav-text">导航五</span>
-                        </Menu.Item>
+                        defaultSelectedKeys={['user', '1']}>
+                        <SubMenu key="user"
+                            title={
+                                <span>
+                                    <Icon type="mail" />
+                                    <span className="nav-text"
+                                        title="我是很长的标题"
+                                        >导航一
+                                    </span>
+                                </span>
+                            }>
+                            <MenuItemGroup title="分组1">
+                                <Menu.Item key="1">选项1</Menu.Item>
+                                <Menu.Item key="2">选项2</Menu.Item>
+                            </MenuItemGroup>
+                            <MenuItemGroup title="分组2">
+                                <Menu.Item key="3">选项3</Menu.Item>
+                                <Menu.Item key="4">选项4</Menu.Item>
+                            </MenuItemGroup>
+                        </SubMenu>
+                        <SubMenu key="sub2"
+                            title={
+                                <span>
+                                    <Icon type="appstore" />
+                                    <span className="nav-text"
+                                        title="很长很长很长的就不要放到下面了"
+                                        >导航二
+                                    </span>
+                                </span>
+                            }>
+                            <Menu.Item key="5">选项5</Menu.Item>
+                            <Menu.Item key="6">选项6</Menu.Item>
+                            <SubMenu key="sub3" title="三级导航">
+                                <Menu.Item key="7">选项7</Menu.Item>
+                                <Menu.Item key="8">选项8</Menu.Item>
+                            </SubMenu>
+                        </SubMenu>
+                        <SubMenu key="sub4"
+                            title={
+                                <span>
+                                    <Icon type="setting" />
+                                    <span className="nav-text"
+                                        title="管理菜单要简短"
+                                        >导航三
+                                    </span>
+                                </span>
+                            }>
+                            <Menu.Item key="9">选项9</Menu.Item>
+                            <Menu.Item key="10">选项10</Menu.Item>
+                            <Menu.Item key="11">选项11</Menu.Item>
+                            <Menu.Item key="12">选项12</Menu.Item>
+                        </SubMenu>
                     </Menu>
+
+
                     <div className="ant-aside-action"
                         onClick={this.onCollapseChange}>
                         {collapse ?

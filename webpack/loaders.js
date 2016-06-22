@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 const sources = path.resolve('./src');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 exports.tslint = {
   test: /\.tsx?$/,
@@ -28,7 +29,7 @@ exports.html = {
 
 exports.css = {
   test: /\.css$/,
-  loader: 'style-loader!css-loader!postcss-loader',
+  loader:  ExtractTextPlugin.extract('style-loader','css-loader!postcss-loader'),
   exclude: /node_modules/,
 };
 

@@ -3,7 +3,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-// const SplitByPathPlugin = require('webpack-split-by-path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const basePlugins = [
   new webpack.DefinePlugin({
@@ -32,9 +32,17 @@ const devPlugins = [
 const prodPlugins = [
   new webpack.optimize.UglifyJsPlugin({
     compress: {
-      warnings: false,
+      warnings: false
     },
+    sourceMap: true
   }),
+  // new webpack.optimize.CommonsChunkPlugin('common', commonName),
+  new ExtractTextPlugin('[name]-[chunkhash].css', {
+    disable: false,
+    allChunks: true,
+  }),
+  new webpack.optimize.OccurenceOrderPlugin(),
+
 ];
 
 module.exports = basePlugins

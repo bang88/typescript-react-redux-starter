@@ -46,7 +46,7 @@ Edit [this file](server/proxy-config.js) to mount such APIs at a given path.
 > improve webpack performance
 
 ```js
-webpack -p // sucks.  Can't found why .
+webpack -p // 
 ```
 
 ## Note

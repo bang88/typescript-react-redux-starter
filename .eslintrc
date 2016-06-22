@@ -1,5 +1,8 @@
 {
   "extends": "eslint-config-airbnb",
+  "ignore": [
+    "src/**/*.js"
+  ],
   "env": {
     "browser": true,
     "node": true,

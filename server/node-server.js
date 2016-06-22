@@ -1,3 +1,6 @@
+/* eslint-disable strict */
+'use strict';
+
 const express = require('express');
 const winston = require('winston');
 const helmet = require('helmet');

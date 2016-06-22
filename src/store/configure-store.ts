@@ -13,8 +13,7 @@ import makeRootReducer, {injectReducer} from './reducers';
 const rooterReducer = makeRootReducer({});
 function configureStore(initialState) {
   const store = compose(
-    _getMiddleware()
-    // ..._getEnhancers()
+    _getMiddleware()    
   )(createStore)(rooterReducer, initialState);
 
   configReducer(store);
@@ -37,19 +36,7 @@ function _getMiddleware() {
 
   return applyMiddleware(...middleware);
 }
-
-function _getEnhancers() {
-  let enhancers = [
-    persistState('session', _getStorageConfig()),
-  ];
-
-  if (__DEV__ && window.devToolsExtension) {
-    enhancers = [...enhancers, window.devToolsExtension()];
-  }
-
-  return enhancers;
-}
-
+ 
 /**
  * store Store
  */
@@ -74,17 +61,17 @@ function _enableHotLoader(store) {
   }
 }
 
-function _getStorageConfig() {
-  return {
-    key: 'react-redux-seed',
-    serialize: (store) => {
-      return store && store.session ?
-        JSON.stringify(store.session.toJS()) : store;
-    },
-    deserialize: (state) => ({
-      session: state ? fromJS(JSON.parse(state)) : fromJS({}),
-    }),
-  };
-}
+// function _getStorageConfig() {
+//   return {
+//     key: 'react-redux-seed',
+//     serialize: (store) => {
+//       return store && store.session ?
+//         JSON.stringify(store.session.toJS()) : store;
+//     },
+//     deserialize: (state) => ({
+//       session: state ? fromJS(JSON.parse(state)) : fromJS({}),
+//     }),
+//   };
+// }
 
 export default configureStore;

@@ -13,7 +13,7 @@
     "cover": "nyc npm run test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "dev:server": "cross-env NODE_ENV=development PORT=3000 nodemon server/node-server.js",
-    "dev:client": "cross-env NODE_ENV=development webpack-dev-server -d --inline --hot --port 3001 --progress --no-info",
+    "dev:client": "cross-env NODE_ENV=development webpack-dev-server -d --inline --hot --port 3001 --progress --no-info --colors --watch",
     "dev": "concurrently -r \"npm run dev:client\" \"npm run dev:server\"",
     "lint": "npm run lint-ts && npm run lint-js && npm run stylefmt && npm run lint-css ",
     "lint-css": "stylelint \"./src/**/*.css\"",

@@ -9,7 +9,10 @@ const basePlugins = [
     __DEV__: process.env.NODE_ENV !== 'production',
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   }),
-
+  new ExtractTextPlugin('[name]-[chunkhash].css', {
+    disable: false,
+    allChunks: true,
+  }),
   new HtmlWebpackPlugin({
     template: './src/index.html',
     inject: 'body',
@@ -37,10 +40,7 @@ const prodPlugins = [
     }
   }),
   // new webpack.optimize.CommonsChunkPlugin('common', commonName),
-  new ExtractTextPlugin('[name]-[chunkhash].css', {
-    disable: false,
-    allChunks: true,
-  }),
+
   new webpack.optimize.OccurenceOrderPlugin(),
 
   new webpack.optimize.CommonsChunkPlugin({

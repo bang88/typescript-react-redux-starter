@@ -1,4 +1,3 @@
-'use strict';
 
 // Proxying to remote HTTP APIs:
 //

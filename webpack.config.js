@@ -1,5 +1,3 @@
-'use strict';
-
 const path = require('path');
 const proxy = require('./server/webpack-dev-proxy');
 const loaders = require('./webpack/loaders');
@@ -30,20 +28,20 @@ const vendor = [
 module.exports = {
   entry: {
     app: appEntries,
-    vendor: vendor,
+    vendor,
   },
 
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].[hash].js',
-    publicPath: publicPath,
+    publicPath,
     sourceMapFilename: '[name].[hash].js.map',
     chunkFilename: '[id].chunk.js',
   },
 
   devtool: 'cheap-module-source-map',
   resolve: { extensions: ['', '.webpack.js', '.web.js', '.tsx', '.ts', '.js'] },
-  plugins: plugins,
+  plugins,
 
   devServer: {
     historyApiFallback: { index: '/' },

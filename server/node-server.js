@@ -1,5 +1,3 @@
-'use strict';
-
 const express = require('express');
 const winston = require('winston');
 const helmet = require('helmet');
@@ -21,10 +19,10 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 authPassport.readUsers()
-  .then( (_users) => {
+  .then((_users) => {
     users = _users;
   })
-  .catch( (err) => {
+  .catch((err) => {
     throw err;
   });
 
@@ -41,7 +39,7 @@ app.use(passport.session());
 passport.use(new LocalStrategy(
   (username, password, done) => {
     authPassport.authenticateUser(username, password, users)
-    .then( (authResult) => {
+    .then((authResult) => {
       return done(null, authResult);
     })
     .then(null, (message) => {
@@ -51,11 +49,11 @@ passport.use(new LocalStrategy(
 
 ));
 
-passport.serializeUser( (user, done) => {
+passport.serializeUser((user, done) => {
   done(null, user.meta.id);
 });
 
-passport.deserializeUser( (id, done) => {
+passport.deserializeUser((id, done) => {
   done(null, authPassport.getUserById(id, users));
 });
 

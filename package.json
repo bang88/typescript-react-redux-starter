@@ -20,7 +20,7 @@
     "lint-ts": "tslint \"src/**/*.tsx\" \"src/**/*.ts\"",
     "lint-js": "eslint \"**/*.js\" --fix --ignore-path .gitignore",
     "stylefmt": "stylefmt -R src/",
-    "postinstall": "npm run typings",
+    "postinstall": "npm run typings && npm run build",
     "start": "cross-env NODE_ENV=production PORT=3002 node server/node-server.js",
     "pretest": "npm run lint",
     "test": "tsc && ava --verbose",

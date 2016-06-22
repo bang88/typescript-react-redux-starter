@@ -87,7 +87,7 @@ class Layout extends React.Component<any, any> {
                         <SubMenu key="sub5"
                             title={
                                 <span>
-                                    <Icon type="setting" />
+                                   <Icon type="camera" />
                                     <span className="nav-text"
                                         title="管理菜单要简短"
                                         >导航四
@@ -102,7 +102,7 @@ class Layout extends React.Component<any, any> {
                         <SubMenu key="sub6"
                             title={
                                 <span>
-                                    <Icon type="setting" />
+                                    <Icon type="notification" />
                                     <span className="nav-text"
                                         title="管理菜单要简短"
                                         >导航五

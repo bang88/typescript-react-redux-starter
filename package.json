@@ -26,7 +26,7 @@
     "test": "tsc && ava --verbose",
     "test:watch": "concurrently \"tsc -w\"  \"ava --verbose --watch\"",
     "typings": "rimraf typings/ && typings install",
-    "ghpage": "npm run clean && cross-env NODE_ENV=gh webpack -d && node ./scripts/gh-pages.js"
+    "ghpage": "cross-env PUBLIC_PATH=gh npm run build && node ./scripts/gh-pages.js"
   },
   "keywords": [
     "react",

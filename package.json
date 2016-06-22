@@ -8,7 +8,7 @@
   },
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=production webpack -p",
+    "build": "cross-env NODE_ENV=production webpack --progress",
     "clean": "rimraf dist/",
     "cover": "nyc npm run test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",

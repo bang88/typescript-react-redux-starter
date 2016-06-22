@@ -37,7 +37,7 @@ module.exports = {
     chunkFilename: '[id].chunk.js',
   },
 
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   resolve: { extensions: ['', '.webpack.js', '.web.js', '.tsx', '.ts', '.js'] },
   plugins: plugins,
 

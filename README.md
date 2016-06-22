@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/bang88/typescript-react-redux-starter.svg?branch=master)](https://travis-ci.org/bang88/typescript-react-redux-starter)
-[![Circle CI](https://circleci.com/gh/rangle/typescript-react-redux-starter.svg?style=svg)](https://circleci.com/gh/rangle/typescript-react-redux-starter)
+[![Circle CI](https://circleci.com/gh/bang88/typescript-react-redux-starter.svg?style=svg)](https://circleci.com/gh/bang88/typescript-react-redux-starter)
 
 # TypeScript/Antd/React/Redux Starter
 

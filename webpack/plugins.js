@@ -32,9 +32,10 @@ const devPlugins = [
 const prodPlugins = [
   new webpack.optimize.UglifyJsPlugin({
     compress: {
+      unused: true,
+      dead_code: true,
       warnings: false
-    },
-    sourceMap: true
+    }
   }),
   // new webpack.optimize.CommonsChunkPlugin('common', commonName),
   new ExtractTextPlugin('[name]-[chunkhash].css', {
@@ -42,6 +43,10 @@ const prodPlugins = [
     allChunks: true,
   }),
   new webpack.optimize.OccurenceOrderPlugin(),
+
+  new webpack.optimize.CommonsChunkPlugin({
+    names: ['vendor']
+  })
 
 ];
 

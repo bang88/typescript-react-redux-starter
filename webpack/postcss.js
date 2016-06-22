@@ -8,7 +8,7 @@ const postcssBasePlugins = [
     addDependencyTo: webpack,
   }),
   require('postcss-cssnext')({
-    browsers: ['ie >= 9', 'last 2 versions'],
+    browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8'],
   }),
 ];
 const postcssDevPlugins = [];

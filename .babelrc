@@ -2,12 +2,5 @@
   "presets": [
     "es2015"
   ],
-  "plugins": [
-    [
-      "antd",
-      {
-        "style": "css"
-      }
-    ]
-  ]
+  "plugins":[["antd", { "style": "css" }]]
 }

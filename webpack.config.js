@@ -17,11 +17,15 @@ const publicPath = process.env.PUBLIC_PATH === 'gh'
 
 const vendor = [
   'react',
+  'react-dom',
   'react-redux',
   'react-router',
   'react-router-redux',
   'redux',
-  'antd',
+  'redux-thunk',
+  'redux-localstorage',
+  'immutable',
+  'whatwg-fetch',
 ];
 module.exports = {
   entry: {

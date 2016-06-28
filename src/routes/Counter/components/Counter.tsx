@@ -17,7 +17,7 @@ class Counter extends React.Component<CounterProps, any> {
                     this.props.increment()
                 } }>increment</Button>
 
-                <Button type="ghost"
+                <Button type="primary"
                     onClick={this.props.doubleAsync}>doubleAsync</Button>
             </div>
         );

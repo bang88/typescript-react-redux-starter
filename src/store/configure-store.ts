@@ -13,7 +13,7 @@ import makeRootReducer, {injectReducer} from './reducers';
 const rooterReducer = makeRootReducer({});
 function configureStore(initialState) {
   const store = compose(
-    _getMiddleware()    
+    _getMiddleware()
   )(createStore)(rooterReducer, initialState);
 
   configReducer(store);
@@ -36,7 +36,7 @@ function _getMiddleware() {
 
   return applyMiddleware(...middleware);
 }
- 
+
 /**
  * store Store
  */

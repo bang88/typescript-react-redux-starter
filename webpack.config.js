@@ -1,17 +1,20 @@
-const path = require('path');
-const proxy = require('./server/webpack-dev-proxy');
-const loaders = require('./webpack/loaders');
-const plugins = require('./webpack/plugins');
-const postcssInit = require('./webpack/postcss');
+const path = require('path')
+const proxy = require('./server/webpack-dev-proxy')
+const loaders = require('./webpack/loaders')
+const plugins = require('./webpack/plugins')
+const postcssInit = require('./webpack/postcss')
 
-const baseAppEntries = ['./src/index.tsx'];
-const devAppEntries = ['webpack-hot-middleware/client?reload=true'];
+const baseAppEntries = ['./src/index.tsx']
+const devAppEntries = [
+  'webpack-dev-server/client?http://localhost:3001', // WebpackDevServer host and port
+  'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors]
+]
 const appEntries = baseAppEntries
-  .concat(process.env.NODE_ENV === 'development' ? devAppEntries : []);
+  .concat(process.env.NODE_ENV === 'development' ? devAppEntries : [])
 
 // FIXME: change next line if you don't want publish to gh-pages
 const publicPath = process.env.PUBLIC_PATH === 'gh'
-  ? '/typescript-react-redux-starter/' : '/';
+  ? '/typescript-react-redux-starter/' : '/'
 
 const vendor = [
   'react',
@@ -24,7 +27,7 @@ const vendor = [
   'redux-localstorage',
   'immutable',
   'whatwg-fetch',
-];
+]
 module.exports = {
   entry: {
     app: appEntries,
@@ -66,4 +69,4 @@ module.exports = {
   },
 
   postcss: postcssInit,
-};
+}

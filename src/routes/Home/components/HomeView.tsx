@@ -4,6 +4,6 @@ const DuckImage = require('../assets/Duck.jpg');
 export default (props:
     JSX.IntrinsicClassAttributes<React.HTMLProps<HTMLDivElement>>) =>
     <div>
-    hello
+    hello!!
         <img src={DuckImage} alt=""/>
-    </div>  
+    </div>

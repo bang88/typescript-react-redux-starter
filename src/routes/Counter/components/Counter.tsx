@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Button, Tag} from 'antd';
 import { increment, doubleAsync } from '../modules/counter'
-interface CounterProps extends React.Props<any> {
+export interface CounterProps  {
     increment: typeof increment,
     doubleAsync: typeof doubleAsync,
     counter: number

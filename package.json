@@ -67,7 +67,7 @@
     "denodeify": "^1.2.1",
     "enzyme": "^2.2.0",
     "es5-shim": "^4.5.6",
-    "es6-promise": "^3.1.2",
+    "es6-promise": "^4.0.1",
     "es6-shim": "^0.35.0",
     "eslint": "^3.0.1",
     "eslint-config-airbnb": "^9.0.1",

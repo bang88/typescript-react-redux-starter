@@ -71,7 +71,7 @@
     "es6-shim": "^0.35.0",
     "eslint": "^3.0.1",
     "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-import": "^1.9.2",
+    "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^5.2.2",
     "extract-text-webpack-plugin": "^1.0.1",

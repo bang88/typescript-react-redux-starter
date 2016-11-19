@@ -113,7 +113,7 @@
     "style-loader": "^0.13.0",
     "stylefmt": "^4.0.0",
     "stylelint": "^7.0.0",
-    "stylelint-config-standard": "^11.0.0",
+    "stylelint-config-standard": "^15.0.0",
     "stylelint-webpack-plugin": "^0.2.0",
     "ts-babel-node": "^1.0.0",
     "ts-node": "^0.9.0",

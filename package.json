@@ -114,7 +114,7 @@
     "stylefmt": "^4.0.0",
     "stylelint": "^7.0.0",
     "stylelint-config-standard": "^11.0.0",
-    "stylelint-webpack-plugin": "^0.2.0",
+    "stylelint-webpack-plugin": "^0.4.2",
     "ts-babel-node": "^1.0.0",
     "ts-node": "^0.9.0",
     "tslint": "^3.7.4",

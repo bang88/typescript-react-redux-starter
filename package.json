@@ -126,7 +126,7 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.10.0",
     "webpack-split-by-path": "0.0.10",
-    "whatwg-fetch": "^1.0.0"
+    "whatwg-fetch": "^2.0.2"
   },
   "nyc": {
     "reporter": [

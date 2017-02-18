@@ -52,7 +52,7 @@
     "antd": "^1.5.1",
     "autoprefixer": "^6.3.3",
     "autoprefixer-core": "^6.0.1",
-    "ava": "^0.15.2",
+    "ava": "^0.18.2",
     "awesome-typescript-loader": "^2.0.1",
     "babel-core": "^6.9.1",
     "babel-plugin-add-module-exports": "^0.2.1",

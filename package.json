@@ -83,7 +83,7 @@
     "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^9.2.1",
     "less": "^2.7.1",
-    "less-loader": "^2.2.3",
+    "less-loader": "^4.0.0",
     "nodemon": "^1.9.2",
     "nyc": "^6.6.1",
     "object-assign": "^4.0.1",
